@@ -170,14 +170,14 @@
          <fieldset>
            <legend>Información obligatoria</legend>
            <label for="nombre">Nombre:</label>
-           <input required type="text" id="nombre" maxlength="20" minlength="3" name="nombre" placeholder="Nombre completo" >
-           <label for="Correo Electronico" >Correo Electronico:</label>
-           <input required type="text" id="Correo Electronico" 
+           <input required type="text" autocomplete="nombre" id="nombre" maxlength="20" minlength="3" name="nombre" placeholder="Nombre completo" >
+           <label required for="Correo Electronico" >Correo Electronico:</label>
+           <input required type="text" id="Correo Electronico" autocomplete="Correo Electronico" 
            placeholder="correoprueba@gmail.com" name="CorreoelectronicoUsuario">
            <fieldset>
              <legend>Modalidades de juego por Edades</legend>
              <p>Introduce tu edad y dependiendo el rango de edad accederas a unas modalidades adecuadas para ti.</p>
-             <label for="edad">Edad:</label>
+             <label required for="edad">Edad:</label>
              <input required type="number" name="edadUsuario" id="edad">
              <label for="Modalidades">Modalidad de juego</label>
              <select id="Modalidades" name="MododejuegoSeleccionado">
@@ -197,13 +197,66 @@
                  <option>Inazuma fandom Karaoke Music /JustDance </option>
                </optgroup>
              </select>
-             <select multiple>
-               <option> Si, existe dificultad de movilidad.
-               </option>
-               <option>No, dispongo de movilidad para asistir al evento.</option>
-             </select>
+             <p>¿Tienes alguna dificultad de movilidad para realizar o acudir al evento?</p>
+             <label for="movilidadSi">
+               <input 
+                  type="radio" 
+                  name="movilidad" 
+                  id="movilidadSi" 
+                  value="Si" 
+                  required> Si, existe dificultad de movilidad.</label>
+                   <br>
+             <label for="movilidadNo">
+                 <input 
+            type="radio" 
+                  name="movilidad" 
+                  id="movilidadNo" 
+                  value="No">No, dispongo de movilidad para asistir al evento.</label>
+             <p>Selección de tu hora de asistencia para organización de los grupos</p>
+             <label for="Hora">Hora de asistencia</label>
+
+             <input type="time" name="hora" id="hora" required>
            </fieldset>
          </fieldset>
+         <fieldset>
+           <legend> Opcional de Rellenar</legend>
+           <label  for="tel" id="telefono">Introduce tu teléfono de contacto</label>
+           <input type="tel" autocomplete="telefono" id="telefono" placeholder="+34 xxx-xxx-xxx" pattern="[0-9]{9}">
+           <br>
+           <label for="numerointegrantes" id="numerointegrantes">¿Cuantos acompañantes traes en tu grupo?</label>
+           <input type="number" name="numerointegrantes" id=numerointegrantes>
+           </fieldset>
+           <fieldset>
+             <legend>¿Quieres patrocinar el evento?</legend>
+             <p>Envianos tu contacto de empresa o marca personal y nos pondremos en contacto contigo</p>
+             <label for="correoempresarial" id="correoempresarial">Correo empresarial</label>
+             <input autocomplete="correoempresarial" type="mailto" name="correoempresarial" placeholder="namebussines@bussines.info.com" >
+             <p>¿Por qué deseas patrocinarnos</p>
+             <label for="mensaje" id="Motivodepatrocinio">Motivos de patrocinio: </label>
+             <textarea spellcheck="mensaje" id="Motivodepatrocinio" cols="20" rows="10"></textarea>
+           </fieldset>
+         </fieldset>
+         <fieldset>
+           <legend>Especificaciones de juego</legend>
+           <p>Otras especificaciones</p>
+           <label for="Videojuegoname" > Dinos cual tu Inazuma favorito:</label>
+           <input 
+              type="text" 
+              name="Videojuegoname" 
+              id="Videojuegoname"
+              list="Inazumaelevenversion"
+              placeholder="Escribe tu videojuego favorito o selecciona uno...">
+
+           <datalist id="Inazumaelevenversion">
+             <option value="Inazuma eleven RamdonLocke">
+             <option value="Inazuma eleven Fuego y Hielo" >
+           </datalist>
+           <label for="valoracion">¿Cuanto valorarias hasta donde has visto Victory Road?</label>
+           <input type="range" name="valoracion" id="valoracion" min="0" max="10" value="5">
+           </fieldset>
+           <progress value="60" max="100"></progress>
+           <button type="submit">Enviar formulario al evento</button>
+           <button type="reset">Restablecer formulario</button>
        </form>
      </section>
     <section id="EnlancesInteresantes" class="EnlancesInteresantes">

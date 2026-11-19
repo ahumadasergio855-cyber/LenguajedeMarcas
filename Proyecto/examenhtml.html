@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Examen Lenguaje de marcas - Sergio Ahumada Alcalá">
+	<title>Jornadas de Tecnología Abierta</title>
+	
+</head>
+<body>
+	<h1>Jornadas de Tecnología Abierta</h1>
+	<p>Aprende, comparte y descubre nuevas ideas.</p>
+	<nav>
+	<ol>
+		<li><a href="#Presentacion"> Presentación </a></li>
+		<li><a href="#Programa"> Programa </a></li>
+		<li><a href="#Inscripción"> Inscripción </a></li>
+	</ol>
+	</nav>
+	<p>Examen de Lenguaje de Marcas UD2- Sergio Ahumada Alcalá</p>
+     <h2>Presentación</h2>
+     <p>El centro organiza una jornada dedicada a conocer cómo se crean y 		se utilizan las tecnologías de la web.
+		La participación es gratuita y las plazas de los talleres son limitadas.
+	</p>
+	<section id="Presentacion">
+		<h2>Un día para descubrir la web</h2>
+		<p>Durante la jornada, el alumnado podrá conocer proyectos y participar en actividades prácticas. No es necesario tener experiencia previa.</p>
+		<h2>Participantes de una edición anterior de las jornadas.</h2>
+	    <img src="imagenes/jornadas.jpg" alt="Imagen con los participates de una edición anterior de las jornadas">
+	    <div>
+	    <h2>Conoce las jornadas en un minuto</h2>
+	    <p>Este vídeo presenta las actividades que se realizarán durante el encuentro.
+      	</p>
+      	<video controls src="videos/presentacion.mp4" width="480px" muted>
+      		<source src="presentacion.mp4" type="mp4" ></source>
+      			Tu navegador no admite la reproducción de video.
+      	</video>
+      </div>
+
+	</section> 
+	<section id="Programa">
+	<h2>Programa</h2>
+	<table>
+		<thead>		Actividades y plazas disponibles
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="col">Actividad</th>
+			<th scope="col">Hora</th>
+			<th scope="col">Plazas</th>
+	    </tr>
+	    <tr scope="row">
+	    	<th>Introducción a la web</th>
+	    	<td> 09:00 </td>
+	    	<td> 20 </td>
+	    </tr>
+	    <tr scope="row" >
+	    	<th>Taller de documentos digitales</th>
+	    	<td> 10:00 </td>
+	    	<td> 15 </td>
+	    </tr>
+	    <tr scope="row">
+	    	<th>Encuentro de proyectos </th>
+	    	<td> 11:30 </td>
+	    	<td> 25 </td>
+	    </tr scope="row">
+        <tfoot>
+        	<th scope="row" colspan="2">Total de plazas</th>
+        	<td></td>
+        	<td colspan="3">60</td>
+        </tfoot>
+	    	
+	    
+	</tbody>
+		
+	</table>
+    </section>
+    <section id="Inscripción" >
+    	<h2>Inscripción</h2>
+    	<p>Completa tus datos y selecciona cómo  quieres participar. </p>
+    	<form method="POST" action="pgm.html">
+    		<fieldset>
+    		<legend>Datos personales</legend>
+    		<label for="name">Nombre y apellidos</label>
+    		<input required type="text" name="name">
+
+    	    <label for="correoelectronico">Correo Electrónico</label>
+    	    <input name="correoelectronico" type="email">
+
+    	    <label for="telefono">Teléfono</label>
+    	    <input type="tel" name="telefono" placeholder="Ej: 987566398" pattern="[0-9]">
+    	    <label  for="edad">Edad</label>
+    	    <input type="number" name="edad" min="16" max="99">
+          </fieldset>
+          <fieldset>
+    	    <legend>Participación</legend>
+    	    <label for="actividad">Actividad</label>
+    	    <select for="actividad">
+    	    	<option disabled>Selecciona una opcion</option>
+    	    	<option>Introducción a la web</option>
+    	    	<option>Taller de documentos digitales</option>
+    	    	<option>Encuentro de proyectos</option>
+    	    </select>
+    	</input>
+    	    <label for="Observaciones">Observaciones</label>
+    	    <input type="text" name="Observaciones" maxlength="200">
+    	    <label for=Aceptacioncondiciones>Acepto las condiciones de la participación</label>
+    	    <input type="checkbox" name="Aceptacioncondiciones">
+    	    </fieldset>
+    	    <button type="submit" >Enviar Inscripción</button>
+    	    <button type="reset">Restablecer datos</button>
+    	
+    	</form>
+    </section>
+    <footer>
+    	<p>Centro de Formación Horizonte</p>
+    	<p>Actividad académica de Lenguaje de Marcas</p>
+    </footer>
+</body>
+</html>

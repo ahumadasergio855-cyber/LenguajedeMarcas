@@ -1,8 +1,7 @@
 body {
     margin: 0;
-
     background-image:
-        url("imagenes/banner-inazuma.png"),
+        url("../imagenes/banner-inazuma.png"),
         linear-gradient(
             to bottom,
             #c94708 0%,
@@ -10,32 +9,44 @@ body {
             #f47719 70%,
             #ff962e 100%
         );
-        background-repeat:
+    background-repeat:
         no-repeat,
         no-repeat;
-
     background-position:
         top center,
         center;
-
     background-size:
         100% auto,
         100% 100%;
-
     background-color: #ff962e;
-
+} /* ← ESTA LLAVE FALTABA */
 
 /* CONTENIDO PRINCIPAL */
+
 main {
     min-height: 100vh;
     background: transparent;
 }
 
 /* PIE DE PÁGINA */
+
 footer {
     background: transparent;
     color: white;
     padding: 30px;
     text-align: center;
     margin: 0;
+}
+
+@font-face {
+    font-family: 'inazuma';
+    src: url('../tipografia/InazumaEleven.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'inazuma', sans-serif;
 }

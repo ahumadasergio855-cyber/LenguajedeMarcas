@@ -1,41 +1,102 @@
+html,
 body {
     margin: 0;
-    background-image:
-        url("../imagenes/banner-inazuma.png"),
-        linear-gradient(
-            to bottom,
-            #c94708 0%,
-            #e85b19 35%,
-            #f47719 70%,
-            #ff962e 100%
-        );
-    background-repeat:
-        no-repeat,
-        no-repeat;
-    background-position:
-        top center,
-        center;
-    background-size:
-        100% auto,
-        100% 100%;
-    background-color: #ff962e;
-} /* ← ESTA LLAVE FALTABA */
-
-/* CONTENIDO PRINCIPAL */
-
-main {
     min-height: 100vh;
-    background: transparent;
 }
+body{
+    background-image:url("../imagenes/banner-inazuma.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
+} 
+nav {
+    display: flex;
+    align-items: center ;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(
+        to bottom,
+        #732b00,
+        #4a1a00);
+
+   
+    justify-content: space-evenly;
+}
+main {
+    padding: 40px 0;
+}
+
+/* Caja central */
+.contenido {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: rgba(232, 91, 25, 0.92);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.imagen-contenido {
+    display: block;
+
+    width: calc(100% - 10px);
+    height: 250px;
+
+    margin: 20px 5px;
+
+    object-fit: cover;
+}
+
+/* COLORES DE LOS ENLACES*/
+a:link {
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+a:hover {
+    color: #fff;
+    background-color: #c94708;
+    padding: 2px 6px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffd700;
+}
+
+a:active {
+    color: #ffffff;
+}
+
+
 
 /* PIE DE PÁGINA */
 
 footer {
-    background: transparent;
+    background:linear-gradient(
+        to bottom,
+        #732b00,
+        #4a1a00);
+
     color: white;
-    padding: 30px;
+    padding:40px;
     text-align: center;
-    margin: 0;
+    margin-top:30px;
 }
 
 @font-face {
